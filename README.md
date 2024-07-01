@@ -8,7 +8,7 @@ Shuning Xu, Binbin Song, Xiangyu Chen, Xina Liu and Jiantao Zhou
 ## Updates
 
 - ✅ 2024-03-15: Release the first version of the paper at Arxiv.
-- ✅ 2024-07-02: Release the codes of RRID.
+- ✅ 2024-07-01: Release the codes of RRID.
 - [Todo] Release the models and results of RRID.
 
 
