@@ -1,0 +1,103 @@
+# general settings
+name: Train.yml
+model_type: RAWRGBIDModel
+num_gpu: auto  # set num_gpu: 0 for cpu mode
+find_unused_parameters: False
+manual_seed: 0
+
+# dataset and data loader settings
+datasets:
+  train:
+    name: MultiFrameVD
+    type: RAWRGBIDPairedImageDataset
+    dataroot_gt_rgb: dataset/trainset/gt_RGB
+    dataroot_gt_raw: dataset/trainset/gt_RAW_npz
+    dataroot_lq_rgb: dataset/trainset/moire_RGB
+    dataroot_lq_raw: dataset/trainset/moire_RAW_npz
+    io_backend:
+      type: disk
+
+    gt_size: 256
+    use_hflip: true
+    use_rot: false
+
+    # data loader
+    use_shuffle: true
+    num_worker_per_gpu: 8
+    batch_size_per_gpu: 20
+    dataset_enlarge_ratio: 1
+    prefetch_mode: ~
+
+  val:
+    name: MultiFrameVD
+    type: RAWRGBIDPairedImageDataset
+    dataroot_gt_rgb: dataset/testset/gt_RGB
+    dataroot_gt_raw: dataset/testset/gt_RAW_npz
+    dataroot_lq_rgb: dataset/testset/moire_RGB
+    dataroot_lq_raw: dataset/testset/moire_RAW_npz
+    io_backend:
+      type: disk
+    batch_size: 8
+    num_worker: 8
+
+# network structures
+network_g:
+  type: RRID
+
+path:
+  pretrain_network_g: ~
+  strict_load_g: true
+  resume_state: ~
+
+
+# training settings
+train:
+  ema_decay: 0.999
+  optim_g:
+    type: AdamW
+    lr: !!float 2e-4
+    weight_decay: 0
+    betas: [0.9, 0.999]
+
+  scheduler:
+    type: MultiStepLR
+    milestones: [400000]
+    gamma: 0.5
+
+
+  total_iter: 400000
+  warmup_iter: -1  # no warm up
+
+  # losses
+  pixel_opt:
+    type: L1Loss
+    loss_weight: 1.0
+    reduction: mean
+
+# validation settings
+val:
+  val_freq: !!float 5000
+  save_img: false
+
+  metrics:
+    psnr:
+      type: calculate_psnr_pt
+      crop_border: 0
+    ssim:
+      type: calculate_ssim_pt
+      crop_border: 0
+
+# logging settings
+logger:
+  print_freq: 500
+  save_checkpoint_freq: !!float 5000
+  use_tb_logger: true
+  wandb:
+    project: ~
+    resume_id: ~
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500
+
