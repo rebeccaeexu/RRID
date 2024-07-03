@@ -15,9 +15,9 @@ Shuning Xu, Binbin Song, Xiangyu Chen, Xina Liu and Jiantao Zhou
 
 ## Overview
 
-![image-20240701125450731](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20240701125450731.png)
+![image-20240701125450731](https://github.com/rebeccaeexu/RRID/blob/main/figs/image-20240701125450731.png)
 
-![image-20240701125517073](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20240701125517073.png)
+![image-20240701125517073](https://github.com/rebeccaeexu/RRID/blob/main/figs/image-20240701125517073.png)
 
 > Moiré patterns frequently appear when capturing screens with smartphones or cameras, potentially compromising image quality. Previous studies suggest that moiré pattern elimination in the RAW domain offers greater effectiveness compared to demoiréing in the sRGB domain. Nevertheless, relying solely on RAW data for image demoiréing is insufficient in mitigating the color cast due to the absence of essential information required for the color correction by the image signal processor (ISP). In this paper, we propose to jointly utilize both RAW and sRGB data for image demoiréing (RRID), which are readily accessible in modern smartphones and DSLR cameras. We develop Skip-Connection-based Demoiréing Module (SCDM) with Gated Feedback Module (GFM) and Frequency Selection Module (FSM) embedded in skip-connections for the efficient and effective demoiréing of RAW and sRGB features, respectively. Subsequently, we design a RGB Guided ISP (RGISP) to learn a device-dependent ISP, assisting the process of color recovery. Extensive experiments demonstrate that our RRID outperforms state-of-the-art approaches, in terms of the performance in moiré pattern removal and color cast correction by 0.62dB in PSNR and 0.003 in SSIM.
 
@@ -25,9 +25,9 @@ Shuning Xu, Binbin Song, Xiangyu Chen, Xina Liu and Jiantao Zhou
 
 ## Demoireing Results
 
-![image-20240701125619798](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20240701125619798.png)
+![image-20240701125619798](https://github.com/rebeccaeexu/RRID/blob/main/figs/image-20240701125619798.png)
 
-![image-20240701125646976](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20240701125646976.png)
+![image-20240701125646976](https://github.com/rebeccaeexu/RRID/blob/main/figs/image-20240701125646976.png)
 
 **Fig. 3: Qualitative comparison on RAW image demoiréing TMM22 dataset**
 
