@@ -9,7 +9,7 @@ Shuning Xu, Binbin Song, Xiangyu Chen, Xina Liu and Jiantao Zhou
 
 - ✅ 2024-03-15: Release the first version of the paper at Arxiv.
 - ✅ 2024-07-01: Release the codes of RRID.
-- [Todo] Release the models and results of RRID.
+- ✅ 2024-07-11: Release the models and results of RRID.
 
 
 
@@ -44,7 +44,7 @@ Shuning Xu, Binbin Song, Xiangyu Chen, Xina Liu and Jiantao Zhou
 ## Prepare
 
 1. Download [TMM22 dataset](https://mega.nz/file/4WMwiLiD#6HyQxZsUg-qgQ_L6eM5Nt5PiAIdrrmFLutS-tRoZ5XQ).
-2. Download the pre-trained model.
+2. Download the [pre-trained model](https://www.dropbox.com/scl/fo/wxhxlj6y064fbx4lrotcd/APoEwRwRT82LnW8wzDqvW24?rlkey=ghf505sfpkr8y9z5psourzpk6&st=enbcm5va&dl=0).
 
 
 
@@ -76,7 +76,7 @@ python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 train.p
 
 ## Results
 
-The inference results on benchmark datasets are available at 
+The inference results on benchmark datasets are available at [Dropbox link](https://www.dropbox.com/scl/fo/1a0mhgy6x76zi2bww7fs1/AB7rQtX2bdvJxBEtv4e54yM?rlkey=esb6931y40s9vjsqu4q740ckt&st=kqpualkl&dl=0).
 
 
 
