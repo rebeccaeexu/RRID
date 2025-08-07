@@ -43,7 +43,7 @@ Shuning Xu, Binbin Song, Xiangyu Chen, Xina Liu and Jiantao Zhou
 
 ## Prepare
 
-1. Download [TMM22 dataset](https://mega.nz/file/4WMwiLiD#6HyQxZsUg-qgQ_L6eM5Nt5PiAIdrrmFLutS-tRoZ5XQ).
+1. Download [TMM22 dataset](https://pan.baidu.com/s/1RqQHV4FO49wPID5-vtoRaQ?pwd=3c6m).
 2. Download the [pre-trained model](https://www.dropbox.com/scl/fo/wxhxlj6y064fbx4lrotcd/APoEwRwRT82LnW8wzDqvW24?rlkey=ghf505sfpkr8y9z5psourzpk6&st=enbcm5va&dl=0).
 
 
